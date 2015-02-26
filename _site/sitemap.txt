@@ -1,9 +1,0 @@
-
-http://andy-cheung.me/archive.html
-http://andy-cheung.me/atom.xml
-http://andy-cheung.me/categories.html
-http://andy-cheung.me/index.html
-http://andy-cheung.me/pages.html
-http://andy-cheung.me/rss.xml
-http://andy-cheung.me/sitemap.txt
-http://andy-cheung.me/tags.html
