@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>THE WAY HOME</title>
+ <link href="http://andy-cheung.me/" rel="self"/>
+ <link href="http://andy-cheung.me"/>
+ <updated>2015-02-26T11:29:35+08:00</updated>
+ <id>http://andy-cheung.me</id>
+ <author>
+   <name>Andy Cheung</name>
+   <email>im@andy-cheung.me</email>
+ </author>
+
+ 
+ 
+</feed>
