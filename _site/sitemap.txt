@@ -10,4 +10,5 @@ http://andy-cheung.me/rss.xml
 http://andy-cheung.me/sitemap.txt
 http://andy-cheung.me/tags.html
 
+http://andy-cheung.me/%E7%94%9F%E6%B4%BB/2015/03/15/c
 http://andy-cheung.me/%E7%94%9F%E6%B4%BB/2015/02/26/2014
