@@ -1,25 +1,23 @@
 ---
-title: About me
+title: 关于我 About Me
 layout: page
-comments: no
+comments: true
 ---
 
-程序猿一头，目前专注于 iOS 系统的开发	
-热爱编程，开源爱好者		
-代码洁癖症患者  	
-微博控   
-热爱一切美好的事物
++ xx永远争第一
++ oo目标世俱杯夺冠
++ yy勇夺世界杯
++ skyleft想要做一个靠谱的freelancer
+前三个和最后一个有本质不同！！！
 
 ----
 
-###联系方式：        
+###联系我 Contact Me：        
 
-个人邮箱: [ccf.developer@gmail.com](mailto:ccf.developer@gmail.com)     
-新浪微博: [webfrogs](http://weibo.com/u/1713195262)	    
-github : [webfrogs](https://github.com/webfrogs)        
-twitter: [Carl Chen](https://twitter.com/CarlOnWeb)
+
++ 邮箱 [im@andy-cheung.me](mailto:andy-cheung.me)	    
++ Github : [skyleft](https://github.com/skyleft),门庭冷落，请不要相信这就是我的实力代表        
++ Skype: andy_zzc
++ Elance: [Hire me on Elance](https://www.elance.com/s/edit/skyleft/)
 
 ----
-
-
-[![新浪微博](http://service.t.sina.com.cn/widget/qmd/1713195262/f78fbcd2/1.png)](http://weibo.com/u/1713195262?s=6uyXnP)
