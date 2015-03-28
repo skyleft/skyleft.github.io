@@ -6,4 +6,5 @@ highlighter: pygments
 safe: true
 paginate: 16
 auto: true
+title: skyleft's HomePage
 
