@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="skyleft" />
-    <title>webfrogs' Homepage | skyleft</title>
+    <title>tags | skyleft</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/feed/" rel="alternate" title="skyleft" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/style.css">
@@ -40,7 +40,7 @@
     <div id="container">
       <div id="main" role="main">
         <header>
-        <h1>webfrogs' Homepage</h1>
+        <h1>tags</h1>
         </header>
         <nav>
         <span><a title="home page" class="" href="/">主页</a></span>
@@ -52,44 +52,45 @@
         </nav>
         <article class="content">
         <section class="post">
+<div id='tag_cloud'>
+
+<a href="#CR7" title="CR7" rel="1">CR7</a>
+
+</div>
+
+
+
+
 <ul class="listing">
 
-  
-  
-    
-    <li class="listing-seperator">2015</li>
-  
+  <li class="listing-seperator" id="CR7">CR7</li>
+
   <li class="listing-item">
-    <time datetime="2015-03-15">2015-03-15</time>
-    <a href="/2015/03/15/c/" title="我为什么喜欢CR7">我为什么喜欢CR7</a>
+  <time datetime="2015-03-15">2015-03-15</time>
+  <a href="http://andy-cheung.me/2015/03/15/c/" title="我为什么喜欢CR7">我为什么喜欢CR7</a>
   </li>
 
-  
-  
-  <li class="listing-item">
-    <time datetime="2015-02-26">2015-02-26</time>
-    <a href="/2015/02/26/2014/" title="渐行渐远">渐行渐远</a>
-  </li>
 
 </ul>
 
-<div id="post-pagination" class="paginator">
 
-  
-    <span class="previous disabled"><前页</span>
-  
 
-      
-      <span class="current-page">1</span>
-      
 
-    
+<script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
 
-  
-    <span class="next disabled" >后页></span>
-  
-  (共2篇)
-</div>
+
+<p></p>
+
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+    size: {start: 1, end: 1, unit: 'em'},
+      color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+    $('#tag_cloud a').tagcloud();
+});
+</script>
 
 
 </section>
