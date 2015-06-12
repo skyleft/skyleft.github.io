@@ -18,6 +18,5 @@ comments: true
 + 邮箱 [im@andy-cheung.me](mailto:andy-cheung.me)	    
 + Github : [skyleft](https://github.com/skyleft),门庭冷落，请不要相信这就是我的实力代表        
 + Skype: andy_zzc
-+ Elance: [Hire me on Elance](https://www.elance.com/s/edit/skyleft/)
 
 ----
