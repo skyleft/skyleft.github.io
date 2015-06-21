@@ -7,8 +7,34 @@
     <title>skyleft</title>
     <link href="http://andy-cheung.me/feed/" rel="self" />
     <link href="http://webfrogs.github.com" />
-    <lastBuildDate>2015-06-16T21:32:12+08:00</lastBuildDate>
+    <lastBuildDate>2015-06-21T15:58:31+08:00</lastBuildDate>
     <webMaster>ccf.developer@gmail.com</webMaster>
+    
+    <item>
+      <title>Ubuntu意外卸载network manager的解决办法</title>
+      <link href="http://andy-cheung.me/2015/06/21/ubuntunetwork-manager/"/>
+      <pubDate>2015-06-21T00:00:00+08:00</pubDate>
+      <author>skyleft</author>
+      <guid>http://andy-cheung.me/2015/06/21/ubuntunetwork-manager</guid>
+      <content:encoded><![CDATA[<p>已经很久没有在博客里写任何关于IT的东西了，今天重新开个头
+当作备忘录用吧。
+折腾ubuntu的时候不小心把network-manager卸载掉了，系统连不了网。
+apt-get用不了，下载的deb包但是依赖问题不好解决。
+google一下其实可以用cli连接wifi的，命令如下。</p>
+
+<pre><code>wpa_passphrase ssid password &gt; foo.conf
+killall -9 wpa_supplicant
+sudo wpa_supplicant -Dwext -i wlan0 -c foo.conf
+</code></pre>
+
+<p>连上之后，dhcp请求一个ip
+    dhcpclient wlan0</p>
+
+<p>ok应该可以上了。</p>
+
+<hr />
+]]></content:encoded>
+    </item>
     
     <item>
       <title>又是一年六月了</title>
@@ -20,7 +46,7 @@
 
 <p>然后我把它作为题目记在了博客里，留下了我在那个六月里凝结的四年里最美好的回忆。</p>
 
-<p>后来我离开青岛来到广州，我承认了自己的孤僻，除了工作里很少和别人有多少交集。我一遍遍地读自己写的这几行文字，还有夹着的几张照片，
+<p>后来我离开青岛来到广州，我一遍遍地读自己写的这几行文字，还有夹着的几张照片，
 听着当时我刻意选作背景乐的《北京东路的日子》，照片里有过回忆的同学，现在想想都是多么可爱，</p>
 
 <p>从“开始的开始”，一直到现在三年之后，想起了从小到大的小伙伴，小学一直到大学，随着自己年龄的增加，内心的壁垒越筑越牢，甚至不经意间
@@ -31,7 +57,7 @@
 
 <p>又是一年六月了，，，</p>
 
-<h2><embed src="http://www.xiami.com/widget/3697069_3697069_235_346_cccccc_dddddd_1/shufflePlayer.swf" type="application/x-shockwave-flash" width="535" height="100" wmode="opaque"></embed></h2>
+<h2><embed src="http://www.xiami.com/widget/3697069_3697069_535_100_99ccff_99ccff_1/shufflePlayer.swf" type="application/x-shockwave-flash" width="535" height="100" wmode="opaque"></embed></h2>
 ]]></content:encoded>
     </item>
     
