@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="skyleft" />
-    <title>Ubuntu意外卸载network manager的解决办法 | skyleft</title>
+    <title>tomcat中指定maven profile | skyleft</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/feed/" rel="alternate" title="skyleft" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/style.css">
@@ -40,7 +40,7 @@
     <div id="container">
       <div id="main" role="main">
         <header>
-        <h1>Ubuntu意外卸载network manager的解决办法</h1>
+        <h1>tomcat中指定maven profile</h1>
         </header>
         <nav>
         <span><a title="home page" class="" href="/">主页</a></span>
@@ -52,21 +52,13 @@
         </nav>
         <article class="content">
         <section class="post">
-<p>已经很久没有在博客里写任何关于IT的东西了，今天重新开个头
-当作备忘录用吧。
-折腾ubuntu的时候不小心把network-manager卸载掉了，系统连不了网。
-apt-get用不了，下载的deb包但是依赖问题不好解决。
-google一下其实可以用cli连接wifi的，命令如下。</p>
+<p>Maven中的profile可以很好的实现不同的运行时环境加载不同配置文件这种需求，
+但是如果不使用maven的tomcat插件，而是直接在eclipse的server中启动tomcat，
+如何去指定使用的是哪一个profile呢？
+其实很简单，看了下面这张图就知道了，具体做法就是 在项目上右键 -- properties -- maven,
+然后右边 Active Maven Profile 中，输入想要运行的profile即可。</p>
 
-<pre><code>wpa_passphrase ssid password &gt; foo.conf
-killall -9 wpa_supplicant
-sudo wpa_supplicant -Dwext -i wlan0 -c foo.conf
-</code></pre>
-
-<p>连上之后，dhcp请求一个ip
-    dhcpclient wlan0</p>
-
-<p>ok应该可以上了。</p>
+<p><img src="/assets/images/QQ20150712-1@2x.png" alt="tomcat指定maven profile" /></p>
 
 <hr />
 
@@ -76,9 +68,9 @@ sudo wpa_supplicant -Dwext -i wlan0 -c foo.conf
 <br/>
 <br/>
 <span>
-	<a  href="http://andy-cheung.me/2015/06/15/" class="pageNav"  >Previous</a>
+	<a  href="http://andy-cheung.me/2015/06/21/ubuntunetwork-manager/" class="pageNav"  >Previous</a>
 	&nbsp;&nbsp;&nbsp;
-	<a  href="http://andy-cheung.me/2015/07/12/tomcatmaven-profile/" class="pageNav"  >Next</a>
+	<a   class="pageNavInvalid"  >Next</a>
 </span>
 <hr>
 <span class="author">
@@ -86,7 +78,7 @@ sudo wpa_supplicant -Dwext -i wlan0 -c foo.conf
 </span>
 <span class="time">
   /
-  <time datetime="2015-06-21">2015-06-21</time>
+  <time datetime="2015-07-12">2015-07-12</time>
 </span>
 <br />
 <span class="license">
@@ -96,7 +88,7 @@ sudo wpa_supplicant -Dwext -i wlan0 -c foo.conf
 <span class="categories">
   in categories
   
-  <a href="/categories/#ubuntu" title="ubuntu">ubuntu</a>&nbsp;
+  <a href="/categories/#java" title="java">java</a>&nbsp;
   
 </span>
 
@@ -104,9 +96,11 @@ sudo wpa_supplicant -Dwext -i wlan0 -c foo.conf
 <span class="tags">
   tagged with 
   
-  <a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>&nbsp;
+  <a href="/tags/#java" title="java">java</a>&nbsp;
   
-  <a href="/tags/#命令行连接wifi" title="命令行连接wifi">命令行连接wifi</a>&nbsp;
+  <a href="/tags/#tomcat" title="tomcat">tomcat</a>&nbsp;
+  
+  <a href="/tags/#maven" title="maven">maven</a>&nbsp;
   
 </span>
 
@@ -118,13 +112,11 @@ $(function(){
     var url = false;
         if (e.which == 37 || e.which == 74) {  // Left arrow and J
             
-        url = 'http://andy-cheung.me/2015/06/15/';
+        url = 'http://andy-cheung.me/2015/06/21/ubuntunetwork-manager/';
         
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
-        url = 'http://andy-cheung.me/2015/07/12/tomcatmaven-profile/';
-        
         }
         if (url) {
             window.location = url;
