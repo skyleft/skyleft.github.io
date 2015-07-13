@@ -7,8 +7,45 @@
     <title>skyleft</title>
     <link href="http://andy-cheung.me/feed/" rel="self" />
     <link href="http://andy-cheung.me" />
-    <lastBuildDate>2015-07-12T18:02:09+08:00</lastBuildDate>
+    <lastBuildDate>2015-07-13T21:09:09+08:00</lastBuildDate>
     <webMaster>ccf.developer@gmail.com</webMaster>
+    
+    <item>
+      <title>thrift报找不到头文件的解决方法</title>
+      <link href="http://andy-cheung.me/2015/07/13/thrift/"/>
+      <pubDate>2015-07-13T00:00:00+08:00</pubDate>
+      <author>skyleft</author>
+      <guid>http://andy-cheung.me/2015/07/13/thrift</guid>
+      <content:encoded><![CDATA[<p>基于thrift构建的C++ server端运行的时候，提示找不到 thrift/TDispatchProcessor.h 头文件，如何解决？</p>
+
+<p>首先确保你安装thrift的时候，安装了C++的library，如果没有，很可能是没有安装boost库，</p>
+
+<p>ubuntu 上 sudo apt-get install -y libboost-all-dev</p>
+
+<p>centos 上 sudo yum install -y boost-devel</p>
+
+<p>有点规律的是，一般ubuntu上都是 libxxx-dev命令的库，在redhat系上就是 xxx-devel命名的。</p>
+
+<p>如果嫌手动编译安装麻烦，ubuntu上可以这样</p>
+
+<pre><code>wget -O - http://debian.datastax.com/debian/repo_key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install libthrift0 libthrift-dev thrift-compiler
+</code></pre>
+
+<p>这样就搞定，但是如果还是提示找不到某某头文件，去/usr/include/thrift下看看，真的没有的话，</p>
+
+<p>很可能是thrift compiler和thrift的库版本不统一, 像上面的TDispatchProcessor.h 在0.9的新版本中应该已经没有了</p>
+
+<p>这样的话，可以通过apt-get指定一个版本号进行统一。</p>
+
+<p>sudo apt-get install thrift-compiler=0.6.0-2~riptano1</p>
+
+<p>0.6.0-2~riptano1换成你自己的thrift库版本，不知道的话 dpkg -l libthrift0 查看一下</p>
+
+<hr />
+]]></content:encoded>
+    </item>
     
     <item>
       <title>tomcat中指定maven profile</title>

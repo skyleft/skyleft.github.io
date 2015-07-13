@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="skyleft" />
-    <title>tomcat中指定maven profile | skyleft</title>
+    <title>thrift报找不到头文件的解决方法 | skyleft</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/feed/" rel="alternate" title="skyleft" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/style.css">
@@ -40,7 +40,7 @@
     <div id="container">
       <div id="main" role="main">
         <header>
-        <h1>tomcat中指定maven profile</h1>
+        <h1>thrift报找不到头文件的解决方法</h1>
         </header>
         <nav>
         <span><a title="home page" class="" href="/">主页</a></span>
@@ -52,13 +52,32 @@
         </nav>
         <article class="content">
         <section class="post">
-<p>Maven中的profile可以很好的实现不同的运行时环境加载不同配置文件这种需求，
-但是如果不使用maven的tomcat插件，而是直接在eclipse的server中启动tomcat，
-如何去指定使用的是哪一个profile呢？
-其实很简单，看了下面这张图就知道了，具体做法就是 在项目上右键 -- properties -- maven,
-然后右边 Active Maven Profile 中，输入想要运行的profile即可。</p>
+<p>基于thrift构建的C++ server端运行的时候，提示找不到 thrift/TDispatchProcessor.h 头文件，如何解决？</p>
 
-<p><img src="/assets/images/QQ20150712-1@2x.png" alt="tomcat指定maven profile" /></p>
+<p>首先确保你安装thrift的时候，安装了C++的library，如果没有，很可能是没有安装boost库，</p>
+
+<p>ubuntu 上 sudo apt-get install -y libboost-all-dev</p>
+
+<p>centos 上 sudo yum install -y boost-devel</p>
+
+<p>有点规律的是，一般ubuntu上都是 libxxx-dev命令的库，在redhat系上就是 xxx-devel命名的。</p>
+
+<p>如果嫌手动编译安装麻烦，ubuntu上可以这样</p>
+
+<pre><code>wget -O - http://debian.datastax.com/debian/repo_key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install libthrift0 libthrift-dev thrift-compiler
+</code></pre>
+
+<p>这样就搞定，但是如果还是提示找不到某某头文件，去/usr/include/thrift下看看，真的没有的话，</p>
+
+<p>很可能是thrift compiler和thrift的库版本不统一, 像上面的TDispatchProcessor.h 在0.9的新版本中应该已经没有了</p>
+
+<p>这样的话，可以通过apt-get指定一个版本号进行统一。</p>
+
+<p>sudo apt-get install thrift-compiler=0.6.0-2~riptano1</p>
+
+<p>0.6.0-2~riptano1换成你自己的thrift库版本，不知道的话 dpkg -l libthrift0 查看一下</p>
 
 <hr />
 
@@ -68,9 +87,9 @@
 <br/>
 <br/>
 <span>
-	<a  href="http://andy-cheung.me/2015/06/21/ubuntunetwork-manager/" class="pageNav"  >Previous</a>
+	<a  href="http://andy-cheung.me/2015/07/12/tomcatmaven-profile/" class="pageNav"  >Previous</a>
 	&nbsp;&nbsp;&nbsp;
-	<a  href="http://andy-cheung.me/2015/07/13/thrift/" class="pageNav"  >Next</a>
+	<a   class="pageNavInvalid"  >Next</a>
 </span>
 <hr>
 <span class="author">
@@ -78,7 +97,7 @@
 </span>
 <span class="time">
   /
-  <time datetime="2015-07-12">2015-07-12</time>
+  <time datetime="2015-07-13">2015-07-13</time>
 </span>
 <br />
 <span class="license">
@@ -98,9 +117,9 @@
   
   <a href="/tags/#java" title="java">java</a>&nbsp;
   
-  <a href="/tags/#tomcat" title="tomcat">tomcat</a>&nbsp;
+  <a href="/tags/#rpc框架" title="rpc框架">rpc框架</a>&nbsp;
   
-  <a href="/tags/#maven" title="maven">maven</a>&nbsp;
+  <a href="/tags/#thrift" title="thrift">thrift</a>&nbsp;
   
 </span>
 
@@ -112,13 +131,11 @@ $(function(){
     var url = false;
         if (e.which == 37 || e.which == 74) {  // Left arrow and J
             
-        url = 'http://andy-cheung.me/2015/06/21/ubuntunetwork-manager/';
+        url = 'http://andy-cheung.me/2015/07/12/tomcatmaven-profile/';
         
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
-        url = 'http://andy-cheung.me/2015/07/13/thrift/';
-        
         }
         if (url) {
             window.location = url;
