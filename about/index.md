@@ -4,11 +4,10 @@ layout: page
 comments: true
 ---
 
-+ xx永远争第一
-+ oo目标世俱杯夺冠
-+ yy勇夺世界杯
-+ skyleft想要做一个靠谱的freelancer
-前三个和最后一个有本质不同！！！
++ 始终奋斗在工地一线的搬砖工
++ 不靠谱白日梦想家
++ 非典型性自闭症患者
++ 靠谱freelancer ing
 
 ----
 
@@ -16,7 +15,5 @@ comments: true
 
 
 + 邮箱 [im@andy-cheung.me](mailto:andy-cheung.me)	    
-+ Github : [skyleft](https://github.com/skyleft),门庭冷落，请不要相信这就是我的实力代表        
-+ Skype: andy_zzc
 
 ----
