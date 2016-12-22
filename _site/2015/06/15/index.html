@@ -11,6 +11,7 @@
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
   </head>
   <script type="text/javascript">
+  	if (location.protocol != 'https:'){location.href = 'https:' + window.location.href.substring(window.location.protocol.length);}
     function setTimeSpan(){
     	var date = new Date();
     	timeSpan.innerText=date.format('yyyy-MM-dd hh:mm:ss');
@@ -80,7 +81,7 @@
 <span>
 	<a   class="pageNavInvalid"  >Previous</a>
 	&nbsp;&nbsp;&nbsp;
-	<a   class="pageNavInvalid"  >Next</a>
+	<a  href="http://localhost:4000/2016/12/22/2016-12-22/" class="pageNav"  >Next</a>
 </span>
 <hr>
 <span class="author">
@@ -119,6 +120,8 @@ $(function(){
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
+        url = 'http://localhost:4000/2016/12/22/2016-12-22/';
+        
         }
         if (url) {
             window.location = url;
